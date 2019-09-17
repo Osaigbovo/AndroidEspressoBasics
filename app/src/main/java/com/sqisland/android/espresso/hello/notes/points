@@ -1,0 +1,44 @@
+
+
+
+		ESPRESSO
+		1. Add "testInstrumentationRunner" and "Espresso core" to app gradle file.
+
+		2. Turn off animation on Android device so that our Espresso tests won't be flaky.
+			> Enable Developer Options (Click Build Number 7x) > System > Developer Option > Turn off Window Animation Scale, Transition Animation Scale,
+			  and Animation Duration Scale.
+
+		3. Put the cursor on the MainActivity class name, press Cmd+Shift+T / Ctrl+Shift+T to create a new test.
+
+		ESPRESSO FORMULA
+		i.  onView(ViewMatcher) - to locate a view on the screen.
+		ii. 	.perform(ViewAction) - perform some action on it.
+		iii.	.check(ViewAssertion) - check if it meets expectations.
+
+		onView(withId(R.id.my_view))       // onView() is a ViewMatcher</strong>
+			.perform(click())              // click()  is a ViewAction</strong>
+			.check(matches(isDisplayed()));// matches(isDisplayed()) is a ViewAssertion
+
+		onView(withId(R.id.user_name)).perform(typeText("jonsnow@westeros.com"))
+		onView(withId(R.id.password)).perform(typeText("winterfell"))
+		onView(withId(R.id.login_button)).perform(click())
+
+		1. ViewMatcher : used to locate the view in the UI hierarchy(tree structure of xml layout components) using withId(R.id.id_of_view), withText("find by 	text on view").
+		2. ViewActions : used to perform a specific action or group of actions in the UI views using ViewInteraction.perform(click(),doubleClick()) or click(), longClick(), doubleClick(), swipeDown(), swipeLeft(), swipeRight(), swipeUp(), typeText(), pressKey(), clearText(), etc.
+		3. ViewAssertion : used to assert view’s state using ViewInteraction.check(assertion method) where assertion methods can be isDisplayed(), isEnabled(), isRoot().
+
+		ListView
+		i. onData(ObjectMatcher) - ObjectMatcher to describe the piece of Data looking for.
+		ii.    .DataOptions
+		iii.   .peform(ViewAction)
+		iv.    .check(ViewAssertion)
+
+		RecyclerView
+		i.  onView(ViewMatcher)
+		ii. 	.perform(RecyclerViewAction)
+		iii.	.check(ViewAssertion) - check if it meets expectations.
+
+		Steps
+		1.  Annotate the class
+		2.  Add an Activity test rule
+		3.	Add a test method.

@@ -13,7 +13,7 @@ class RecyclerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_recycler_view)
 
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
         val footer = findViewById<TextView>(R.id.footer)
