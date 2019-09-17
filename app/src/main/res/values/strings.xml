@@ -5,4 +5,6 @@
   <string name="greet">Greet</string>
 
   <string name="app_name_list_view">List View</string>
+
+  <string name="app_name_recycler_view">Recycler View</string>
 </resources>
