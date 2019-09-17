@@ -1,8 +1,8 @@
 <resources>
   <string name="app_name">Hello World</string>
-
   <string name="title">Android Espresso</string>
-
   <string name="hello">Hello!</string>
   <string name="greet">Greet</string>
+
+  <string name="app_name_list_view">List View</string>
 </resources>

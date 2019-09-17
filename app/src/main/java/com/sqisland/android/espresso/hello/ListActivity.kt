@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 // Verify that a piece of data is shown. Scroll until an itemView containing that piece of data is displayed on the screen
 class ListActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
